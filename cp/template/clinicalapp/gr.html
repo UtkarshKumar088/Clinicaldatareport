@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical data Report</title>
+</head>
+<body>
+    <h1>Clinical data Report : </h1>
+    <table border="2">
+        <thead>
+            <th>COmponent Name</th>
+            <th>COmponent Value</th>
+            <th>Measure Date Time</th>
+        </thead>
+        {% for x in data %}
+        <tr>
+            <td>{{x.componentname}}</td>
+            <td>{{x.componentvalue}}</td>
+            <td>{{x.measuredDataTime}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/rep">Home</a>
+</body>
+</html>
